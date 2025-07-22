@@ -7,6 +7,13 @@ function colors(color) {
   // Si no es ninguno de esos colores           --> "Color not found".
   // PISTA: utilizar el statement SWITCH.
   // Tu código:
+  const colores = {
+    "blue" : "This is blue",
+    "red" : "This is red",
+    "green" : "This is green",
+    "orange" : "This is orange"
+  }
+  return colores[color] || "Color not found";
 }
 
 module.exports = colors;
