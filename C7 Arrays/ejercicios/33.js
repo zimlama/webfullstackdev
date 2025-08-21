@@ -7,6 +7,18 @@ function combine(str1, str2, str3) {
   // combine("abc", "12345", "") == "a1b2c345"
   // combine("abc", "12345", "67") == "a16b27c345"
   // Tu código:
+  let result = "";
+  const maxLength = Math.max(str1.length, str2.length, str3.length);
+
+  for (let i = 0; i < maxLength; i++) {
+    if (str1[i]) result += str1[i];
+    if (str2[i]) result += str2[i];
+    if (str3[i]) result += str3[i];
+  }
+
+  return result;
 }
 
-module.exports = combine;
+// Export compatible con ambos estilos de import en Jest:
+module.exports = combine;         // require('...') -> función
+module.exports.combine = combine; // require('...').combine -> función
